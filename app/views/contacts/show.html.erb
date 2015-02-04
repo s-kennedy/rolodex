@@ -1,0 +1,15 @@
+<h1><%= @contact.name%></h1>
+
+<ul>
+	<li><%= @contact.email%></li>
+	<% if @contact.phone.present? %>
+		<li><%= @contact.phone%></li>
+	<%end%>
+	<% if @contact.address.present? %>
+		<li><%= @contact.address%></li>
+	<% end %>
+	<% if @contact.notes.present? %>
+		<li><%= @contact.notes%></li>
+	<% end %>
+	
+</ul>
