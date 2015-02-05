@@ -1,3 +1,63 @@
 // Place all the styles related to the contacts controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.container {
+	position: fixed;
+	top: 30%;
+}
+
+h1 {
+	font-size: 50px;
+}
+
+li {
+	padding: 5px;
+	font-size: 24px;
+}
+
+.glyphicon {
+	padding-right: 10px;
+}
+
+.link {
+	margin: 5px;
+	color: #333;
+	font-size: 16px;
+}
+
+.contact__options {
+	margin-top: 30px;
+}
+
+.next {
+	position: fixed;
+	top: 45%;
+	right: 40px;
+}
+
+
+.previous {
+	position: fixed;
+	top: 45%;
+	left: 40px;
+}
+
+.glyphicon {
+	font-size: 20px;
+}
+
+.all_contacts {
+	margin: 130px 0;
+}
+
+.new_form {
+	width: 500px;
+	margin: auto;
+	padding: 40px;
+}
+
+.new_form input, label {
+	margin: 5px 0;
+	font-size: 20px
+}

@@ -1,15 +1,58 @@
-<h1><%= @contact.name%></h1>
-
-<ul>
-	<li><%= @contact.email%></li>
-	<% if @contact.phone.present? %>
-		<li><%= @contact.phone%></li>
-	<%end%>
-	<% if @contact.address.present? %>
-		<li><%= @contact.address%></li>
-	<% end %>
-	<% if @contact.notes.present? %>
-		<li><%= @contact.notes%></li>
-	<% end %>
+<div class="container">
+	<div class="row">
+		<div class="col-md-5 col-md-offset-3">
+		
 	
-</ul>
+	
+			<h1 id="contact_name"><%= @contact.name%></h1>
+
+			<br>
+
+			<ul class="list-unstyled contact_info">
+				<li><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span> <%= @contact.email%></li>
+				<% if @contact.phone.present? %>
+					<li><span class="glyphicon glyphicon-earphone" aria-hidden="true"></span> <%= @contact.phone%></li>
+				<%end%>
+				<% if @contact.address.present? %>
+					<li><span class="glyphicon glyphicon-home" aria-hidden="true"></span> <%= @contact.address%></li>
+				<% end %>
+				<% if @contact.notes.present? %>
+					<li><span class="glyphicon glyphicon-flag" aria-hidden="true"></span> <%= @contact.notes%></li>
+				<% end %>
+				
+			</ul>
+
+
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col-md-5 col-md-offset-3">
+			<div class="contact__options">
+				<%= link_to("Edit", edit_contact_path(@contact), class: "link")%>
+
+				<%= link_to("Delete", contact_path(@contact), class: "link", method: 'delete', data: {confirm: "Are you sure?"})%>
+				
+			</div>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col-md-5 col-md-offset-3">
+			<div class="contact__nagivation">
+				<div class="previous">
+					<span class="glyphicon glyphicon-triangle-left" aria-hidden="true"></span>
+					<%= link_to("Previous", contact_path(@contact.id-1), class: "link", id: "previous")%>
+				</div>
+
+				<div class="next">
+					<%= link_to("Next", contact_path(@contact.id+1), class: "link", id: "next")%>
+					<span class="glyphicon glyphicon-triangle-right" aria-hidden="true"></span>
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+
+</div>

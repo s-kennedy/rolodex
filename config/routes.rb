@@ -1,7 +1,6 @@
 Rails.application.routes.draw do
 
   get '/' => 'site#index'
-  get '/search' => 'site#search'
 
   resources :contacts do
     end
