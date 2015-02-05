@@ -8,7 +8,7 @@ class ContactsController < ApplicationController
 		begin
 			@contact = Contact.find params[:id]
 		rescue ActiveRecord::RecordNotFound
-			@contact = Contact.find params[:id]
+			# @contact = Contact.find params[:id]
 			render 'no_contact_found'
 		end
 	end
